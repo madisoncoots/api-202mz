@@ -21,6 +21,6 @@ data <- raw_demographics_17_18 %>%
   select(age = ridageyr, bmi = bmxbmi, pct_hba1c = lbxgh) %>%
   drop_na()
 
-write.csv(data, 'a1c_data.csv')
+write.csv(data, 'a1c_data.csv', row.names = F)
          
          
