@@ -18,7 +18,7 @@ data <- raw_demographics_17_18 %>%
   left_join(raw_survey_responses_17_18, by = "seqn") %>%
   left_join(raw_body_measurements_17_18, by = "seqn") %>%
   left_join(raw_glycohemoglobin_17_18, by = "seqn") %>%
-  select(age = ridageyr, bmi = bmxbmi, pct_hba1c = lbxgh) %>%
+  select(age = ridageyr, bmi = bmxbmi, a1c = lbxgh) %>%
   drop_na()
 
 write.csv(data, 'a1c_data.csv', row.names = F)
